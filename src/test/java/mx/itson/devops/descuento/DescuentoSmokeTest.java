@@ -3,6 +3,7 @@ package mx.itson.devops.descuento;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /** Pruebas basicas que ya venian con el proyecto. */
