@@ -5,8 +5,8 @@ package mx.itson.devops.descuento;
  *
  * REGLA DE NEGOCIO (actualizada esta semana por el area comercial):
  *   - menos de 100 unidades   -> 0 %
- *   - de 100 a 499 unidades   -> 10 %
- *   - DESDE 500 unidades      -> 15 %
+ *   - de 500 a 999 unidades   -> 15 %
+ *   - DESDE 1000 unidades     -> 20 %
  *   - unidades negativas      -> IllegalArgumentException
  *   - precio unitario <= 0    -> IllegalArgumentException (error de captura)
  */
@@ -15,6 +15,9 @@ public class Descuento {
     public int porcentaje(int unidades) {
         if (unidades < 0) {
             throw new IllegalArgumentException("unidades negativas: " + unidades);
+        }
+        if (unidades >= 1000) {
+            return 20;
         }
         if (unidades >= 500) {
             return 15;
